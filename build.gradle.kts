@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "org.example"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(11)
+    jvmToolchain(8)
 }
 
 application {
