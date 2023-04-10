@@ -3,7 +3,7 @@ plugins {
     application
 }
 
-group = "org.example"
+group = "ru.dumdumbich"
 version = "1.0"
 
 repositories {
@@ -23,5 +23,15 @@ kotlin {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("ru.dumdumbich.MainKt")
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "ru.dumdumbich.MainKt"
+    }
+    configurations["compileClasspath"].forEach { file: File ->
+        from(zipTree(file.absoluteFile))
+    }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
 }
