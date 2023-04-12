@@ -1,4 +1,4 @@
-package ru.dumdumbich.ru.dumdumbich.domain.entity
+package ru.dumdumbich.ui.entity
 
 /**
  * @author  DumDumbIch (dumdumbich@mail.ru)

@@ -1,4 +1,4 @@
-package ru.dumdumbich.ru.dumdumbich.ui.home
+package ru.dumdumbich.ui.pages.home
 
 import io.ktor.resources.*
 import io.ktor.server.application.*
@@ -14,8 +14,8 @@ import kotlinx.serialization.Serializable
  * @date  11.04.2023 09:59
  */
 
-@Resource("/home")
 @Serializable
+@Resource("/pages/home")
 class HomePageRoute
 
 fun Route.homePageRoute() {

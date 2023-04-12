@@ -1,4 +1,4 @@
-package ru.dumdumbich.ru.dumdumbich.ui.base
+package ru.dumdumbich.ui.base
 
 import freemarker.cache.ClassTemplateLoader
 import freemarker.core.HTMLOutputFormat

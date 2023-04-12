@@ -1,12 +1,14 @@
 package ru.dumdumbich
 
 import io.ktor.server.application.*
+import io.ktor.server.plugins.callloging.*
+import io.ktor.server.plugins.defaultheaders.*
 import io.ktor.server.resources.*
-import ru.dumdumbich.ru.dumdumbich.core.monitor.AppMonitorPlugin
-import ru.dumdumbich.ru.dumdumbich.core.monitor.monitorModule
-import ru.dumdumbich.ru.dumdumbich.ui.base.configureTemplating
-import ru.dumdumbich.ru.dumdumbich.ui.home.registerHomePageRoute
-import ru.dumdumbich.ru.dumdumbich.ui.root.registerRootPageRoute
+import ru.dumdumbich.core.monitor.AppMonitorPlugin
+import ru.dumdumbich.core.monitor.monitorModule
+import ru.dumdumbich.ui.base.configureTemplating
+import ru.dumdumbich.ui.pages.home.registerHomePageRoute
+import ru.dumdumbich.ui.root.registerRootPageRoute
 
 /**
  * @author  DumDumbIch (dumdumbich@mail.ru)
@@ -20,6 +22,8 @@ fun main(args: Array<String>): Unit =
 @Suppress("unused") // application.conf references the main function. This annotation prevents the IDE from marking it as unused.
 fun Application.module() {
     install(Resources)
+    install(DefaultHeaders)
+    install(CallLogging)
     install(AppMonitorPlugin)
     monitorModule()
     configureTemplating()

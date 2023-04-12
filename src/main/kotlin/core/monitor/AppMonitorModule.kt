@@ -1,4 +1,4 @@
-package ru.dumdumbich.ru.dumdumbich.core.monitor
+package ru.dumdumbich.core.monitor
 
 import io.ktor.server.application.*
 import io.ktor.server.request.*
@@ -9,7 +9,7 @@ import io.ktor.server.request.*
  * @date  11.04.2023 13:55
  */
 
-fun Application.monitorModule(){
+fun Application.monitorModule() {
     environment.monitor.subscribe(ApplicationStarted) { application ->
         application.environment.log.info("Server is started")
     }

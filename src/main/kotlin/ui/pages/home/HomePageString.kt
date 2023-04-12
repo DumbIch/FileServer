@@ -1,7 +1,7 @@
-package ru.dumdumbich.ru.dumdumbich.ui.home
+package ru.dumdumbich.ui.pages.home
 
-import ru.dumdumbich.ru.dumdumbich.domain.entity.Content
-import ru.dumdumbich.ru.dumdumbich.domain.entity.Language
+import ru.dumdumbich.ui.entity.Content
+import ru.dumdumbich.ui.entity.Language
 
 /**
  * @author  DumDumbIch (dumdumbich@mail.ru)

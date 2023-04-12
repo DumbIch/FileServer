@@ -1,6 +1,6 @@
-package ru.dumdumbich.ru.dumdumbich.ui.base
+package ru.dumdumbich.ui.base
 
-import ru.dumdumbich.ru.dumdumbich.domain.entity.Language
+import ru.dumdumbich.ui.entity.Language
 
 /**
  * @author  DumDumbIch (dumdumbich@mail.ru)

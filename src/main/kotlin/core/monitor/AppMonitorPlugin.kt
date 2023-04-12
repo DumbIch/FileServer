@@ -1,4 +1,4 @@
-package ru.dumdumbich.ru.dumdumbich.core.monitor
+package ru.dumdumbich.core.monitor
 
 import io.ktor.events.EventDefinition
 import io.ktor.http.*

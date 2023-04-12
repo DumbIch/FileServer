@@ -1,4 +1,4 @@
-package ru.dumdumbich.ru.dumdumbich.ui.root
+package ru.dumdumbich.ui.root
 
 import io.ktor.resources.*
 import io.ktor.server.application.*
@@ -14,13 +14,13 @@ import kotlinx.serialization.Serializable
  * @date  11.04.2023 10:06
  */
 
-@Resource("/")
 @Serializable
+@Resource("/home")
 class RootPageRoute
 
 fun Route.rootPageRoute() {
     get<RootPageRoute> {
-        call.respondRedirect("/home", permanent = true)
+        call.respondRedirect("/pages/home", permanent = true)
     }
 }
 
