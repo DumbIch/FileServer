@@ -8,6 +8,7 @@ import ru.dumdumbich.core.monitor.AppMonitorPlugin
 import ru.dumdumbich.core.monitor.monitorModule
 import ru.dumdumbich.ui.base.configureTemplating
 import ru.dumdumbich.ui.pages.home.registerHomePageRoute
+import ru.dumdumbich.ui.pages.tracking.registerTrackingPageRoute
 import ru.dumdumbich.ui.root.registerRootPageRoute
 
 /**
@@ -15,6 +16,9 @@ import ru.dumdumbich.ui.root.registerRootPageRoute
  * @version 1.0
  * @date  11.04.2023 09:38
  */
+
+// Только для отладки -> перенести в Настройки
+const val targetDirectory = "/home/dumdumbich/develop/server/temp/"
 
 fun main(args: Array<String>): Unit =
     io.ktor.server.netty.EngineMain.main(args)
@@ -29,4 +33,5 @@ fun Application.module() {
     configureTemplating()
     registerRootPageRoute()
     registerHomePageRoute()
+    registerTrackingPageRoute(targetDirectory)
 }

@@ -19,14 +19,13 @@ repositories {
 
 dependencies {
     // Ktor
-    implementation("io.ktor:ktor-server-core-jvm:$ktorVersion")
-    implementation("io.ktor:ktor-server-netty-jvm:$ktorVersion")
+    implementation("io.ktor:ktor-server-core:$ktorVersion")
+    implementation("io.ktor:ktor-server-netty:$ktorVersion")
     implementation("io.ktor:ktor-server-resources:$ktorVersion")
-    implementation("io.ktor:ktor-server-html-builder:$ktorVersion")
     implementation("io.ktor:ktor-server-default-headers:$ktorVersion")
     implementation("io.ktor:ktor-server-freemarker:$ktorVersion")
     implementation("io.ktor:ktor-server-call-logging:$ktorVersion")
-    testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
+    testImplementation("io.ktor:ktor-server-tests:$ktorVersion")
 
     // LogBack
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
@@ -36,6 +35,7 @@ dependencies {
     implementation("commons-io:commons-io:2.11.0")
     testImplementation(kotlin("test"))
     testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlinVersion")
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 tasks.test {
