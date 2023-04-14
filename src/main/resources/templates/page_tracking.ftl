@@ -6,11 +6,9 @@
             ${model.columnFileName} : ${model.columnCreatedTime} : ${model.columnLastModificationTime} : ${model.columnMimeType} : ${model.columnFileSize} : ${model.columnFileOrDirectory}
         </h3>
     </div>
-    <#list model.listFileInfo as file>
-        <div>
-            <p>
-                ${file.name} : ${file.createdTime} : ${file.lastModifiedTime} : ${file.mimeType} : ${file.size} : ${file.pathType}
-            </p>
-        </div>
-    </#list>
+    <table border="1px" cellspacing="2" border="1" cellpadding="5">
+        <#list model.listFileInfo as file>
+            <tr><td>${file.name}<td>${file.createdTime}<td>${file.lastModifiedTime}<td>${file.mimeType}<td>${file.size}<td>${file.pathType}
+        </#list>
+    </table>
 </@layout.header>
