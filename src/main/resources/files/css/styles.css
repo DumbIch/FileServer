@@ -1,0 +1,14 @@
+table {
+  width: 100%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  border: 3px solid grey;
+  background-color: rgba(100, 180, 250, 0.3);
+}
+
+th {
+   border: 1px solid grey;
+}
+
+td {
+   border: 1px solid grey;
+}

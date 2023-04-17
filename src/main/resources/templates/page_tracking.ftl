@@ -1,12 +1,10 @@
 <#import "page_base.ftl" as layout />
 <@layout.header>
-    <h1>${model.title}</h1>
-    <div>
-        <h3>
-            ${model.columnFileName} : ${model.columnCreatedTime} : ${model.columnLastModificationTime} : ${model.columnMimeType} : ${model.columnFileSize} : ${model.columnFileOrDirectory}
-        </h3>
-    </div>
-    <table border="1px" cellspacing="2" border="1" cellpadding="5">
+    <table>
+        <caption align=center>
+            <em><b>${model.title}</b></em>
+        </caption>
+        <tr><th>${model.columnFileName}<th>${model.columnCreatedTime}<th>${model.columnLastModificationTime}<th>${model.columnMimeType}<th>${model.columnFileSize}<th>${model.columnFileOrDirectory}
         <#list model.listFileInfo as file>
             <tr><td>${file.name}<td>${file.createdTime}<td>${file.lastModifiedTime}<td>${file.mimeType}<td>${file.size}<td>${file.pathType}
         </#list>

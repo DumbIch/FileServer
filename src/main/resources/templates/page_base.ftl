@@ -3,10 +3,11 @@
     <html lang="en">
         <head>
             <title>${model.titleHeader}</title>
+            <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
         </head>
-        <body style="text-align: left; font-family: sans-serif">
-            <img src="/static/atom.jpg">
-            <h1>${model.titleHeader}</h1>
+        <body>
+            <img src="/static/images/atom.jpg">
+            <h2>${model.titleHeader}</h2>
             <hr>
             <#nested>
             <hr>
